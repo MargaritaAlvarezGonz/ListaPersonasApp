@@ -44,27 +44,27 @@ public class Persona {
     }
 
     // Constructor con argumentos
-    public Persona(String nombre, String tel, String email){
+    public Persona(String nombre, String tel, String email) {
         this();
         this.nombre = nombre;
-        this. tel = tel;
+        this.tel = tel;
         this.email = email;
+    }
 
-    public int getId(){
-        return id;
+    @Override
+    public String toString() {
+        return "Persona{" +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
+                ", tel='" + tel + '\'' +
+                ", email='" + email + '\'' +
+                '}' + super.toString();
+    }
+
+    public static void main(String[] args){
+            Persona persona1 = new Persona("Juan Pérez", "555555", "juan@gmail.com");
+            System.out.println(persona1);
         }
-
-    public void setId(int id){
-        this.id = id;
-        }
-
-
     }
 
 
-
-
-
-    }
-
-}
